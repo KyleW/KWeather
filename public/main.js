@@ -8,7 +8,9 @@ var getCurrentLoc = function(){
 
 var lookupLatLong = function(loc){};
 
-var getForecast = function(){};
+var getForecast = function(){
+  // Open Meteo API's - https://openmeteoforecast.org/wiki/API/0.1
+};
 
 
 
@@ -16,7 +18,10 @@ $(document).ready(function(){
   getCurrentLoc();
 
   if (!("autofocus" in document.createElement("input"))) {
-    $("#city").focus();
+    $("#citySearch").focus();
   }
 
 });
+
+
+// TODO: Add Weather Underground Attribution
