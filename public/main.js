@@ -1,17 +1,16 @@
 
+var userLocation;
+
 var getCurrentLoc = function(){
+  //TODO: switch to bing API for consistency??
+
   // Details on API at http://www.telize.com/
   $.getJSON("http://www.telize.com/geoip?callback=?",function(json) {
-    console.log(json);
+    console.log(json); //debugging
+    userLocation=""+json.latitude+","+json.longitude;
+    console.log("userLocation= ",userLocation); //debugging
   });
 };
-
-var lookupLatLong = function(loc){};
-
-var getForecast = function(){
-  // Open Meteo API's - https://openmeteoforecast.org/wiki/API/0.1
-};
-
 
 
 $(document).ready(function(){
